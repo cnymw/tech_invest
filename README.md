@@ -14,7 +14,7 @@
 
 - [indicator：Golang项目，提供了一套丰富的技术分析指标、策略以及一个用于回测的框架](https://github.com/cinar/indicator)
 - [awesome-quant：量化投资项目合集，为量化投资开发者整理了非常实用的库，包和资源列表](https://github.com/wilsonfreitas/awesome-quant)
-- [indicator：Golang项目，Golang实现财报分析、个股基本面检测、基本面选股、4433法则基金筛选与检测、基金持仓相似度、股票选基、基金经理筛选](https://github.com/axiaoxin-com/investool)
+- [investool：Golang项目，Golang实现财报分析、个股基本面检测、基本面选股、4433法则基金筛选与检测、基金持仓相似度、股票选基、基金经理筛选](https://github.com/axiaoxin-com/investool)
 
 ## AI量化项目
 
