@@ -9,7 +9,6 @@
 - [程序猿投资笔记之研究K线](https://mp.weixin.qq.com/s/edKjMuc6ugPNRdfT8ZcyCw)
 - [程序猿投资笔记之研究早晨之星早晨十字星](https://mp.weixin.qq.com/s/IuuX0yKGQv7TMa1YdljkJQ)
 
-
 ## 量化开源项目
 
 - [indicator：Golang项目，提供了一套丰富的技术分析指标、策略以及一个用于回测的框架](https://github.com/cinar/indicator)
@@ -20,6 +19,7 @@
 
 - [qlib：微软开源的AI量化平台，一个面向人工智能的量化投资平台，旨在利用人工智能技术赋能量化研究](https://github.com/microsoft/qlib)
 - [A_Share_investment_Agent：基于人工智能的投资系统概念验证项目。项目目标是探索如何使用 AI 来辅助投资决策，通过多 Agent 协同工作，结合大型语言模型 (LLM) 的分析能力，提供多角度的市场解读和投资建议](https://github.com/24mlight/A_Share_investment_Agent)
+- [TradingAgents：多智能体大语言模型金融交易框架](https://github.com/TauricResearch/TradingAgents)
 
 ## 量化投资平台
 
