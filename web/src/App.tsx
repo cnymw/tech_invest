@@ -1,9 +1,14 @@
 import React from 'react';
-import './App.css';
+import {Layout} from "antd";
+import {AppHeader} from "./components/Header.tsx";
+
 
 const App: React.FC = () => {
+
   return (
-    <div></div>
+      <Layout>
+        <AppHeader/>
+      </Layout>
   );
 };
 
