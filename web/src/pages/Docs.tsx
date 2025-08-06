@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {BankOutlined} from '@ant-design/icons';
 import type {MenuProps} from 'antd';
 import {Menu} from 'antd';
+import ReactMarkdown from 'react-markdown';
 
 type MenuItem = Required<MenuProps>['items'][number];
 
@@ -27,18 +28,33 @@ const items: MenuItem[] = [
 ];
 
 export const Docs: React.FC = () => {
-    const onClick: MenuProps['onClick'] = (e) => {
+    const [markdownContent, setMarkdownContent] = useState('');
+
+    const onClick: MenuProps['onClick'] = async (e) => {
         console.log('click ', e);
+        try {
+            const response = await fetch(`/md/${e.key}.md`);
+            const content = await response.text();
+            setMarkdownContent(content);
+        } catch (error) {
+            console.error('Failed to load Markdown file:', error);
+            setMarkdownContent('Failed to load content.');
+        }
     };
 
     return (
-        <Menu
-            onClick={onClick}
-            style={{width: 256, minHeight: '100vh'}}
-            defaultSelectedKeys={['1']}
-            defaultOpenKeys={['studyPolicy']}
-            mode="inline"
-            items={items}
-        />
+        <div style={{display: 'flex'}}>
+            <Menu
+                onClick={onClick}
+                style={{width: 256, minHeight: '100vh'}}
+                defaultSelectedKeys={['1']}
+                defaultOpenKeys={['studyPolicy']}
+                mode="inline"
+                items={items}
+            />
+            <div style={{flex: 1, padding: '20px'}}>
+                <ReactMarkdown>{markdownContent}</ReactMarkdown>
+            </div>
+        </div>
     );
 };
