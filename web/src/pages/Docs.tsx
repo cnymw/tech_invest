@@ -1,8 +1,9 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {BankOutlined} from '@ant-design/icons';
 import type {MenuProps} from 'antd';
 import {Menu} from 'antd';
 import ReactMarkdown from 'react-markdown';
+import 'github-markdown-css/github-markdown-light.css';
 
 type MenuItem = Required<MenuProps>['items'][number];
 
@@ -31,7 +32,6 @@ export const Docs: React.FC = () => {
     const [markdownContent, setMarkdownContent] = useState('');
 
     const onClick: MenuProps['onClick'] = async (e) => {
-        console.log('click ', e);
         try {
             const response = await fetch(`/md/${e.key}.md`);
             const content = await response.text();
@@ -41,6 +41,10 @@ export const Docs: React.FC = () => {
             setMarkdownContent('Failed to load content.');
         }
     };
+
+    useEffect(() => {
+        onClick({key: '1'} as any);
+    }, []);
 
     return (
         <div style={{display: 'flex'}}>
@@ -52,7 +56,7 @@ export const Docs: React.FC = () => {
                 mode="inline"
                 items={items}
             />
-            <div style={{flex: 1, padding: '20px'}}>
+            <div className="markdown-body" style={{flex: 1, padding: '20px'}}>
                 <ReactMarkdown>{markdownContent}</ReactMarkdown>
             </div>
         </div>
