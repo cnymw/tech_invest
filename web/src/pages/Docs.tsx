@@ -18,7 +18,7 @@ const items: MenuItem[] = [
                 label: '《分析与思考：黄奇帆的复旦经济课》',
                 type: 'group',
                 children: [
-                    {key: '1', label: '宏观调控'},
+                    {key: '黄奇帆的复旦经济课-宏观调控', label: '宏观调控'},
                     {key: '2', label: '基础货币'},
                     {key: '3', label: '资本市场'},
                     {key: '4', label: '房地产发展'},
@@ -43,7 +43,7 @@ export const Docs: React.FC = () => {
     };
 
     useEffect(() => {
-        onClick({key: '1'} as any);
+        onClick({key: '黄奇帆的复旦经济课-宏观调控'} as any);
     }, []);
 
     return (
