@@ -4,6 +4,7 @@ import type {MenuProps} from 'antd';
 import {Menu} from 'antd';
 import ReactMarkdown from 'react-markdown';
 import 'github-markdown-css/github-markdown-light.css';
+import './Docs.css'
 
 type MenuItem = Required<MenuProps>['items'][number];
 
@@ -19,9 +20,9 @@ const items: MenuItem[] = [
                 type: 'group',
                 children: [
                     {key: '黄奇帆的复旦经济课-宏观调控', label: '宏观调控'},
-                    {key: '2', label: '基础货币'},
-                    {key: '3', label: '资本市场'},
-                    {key: '4', label: '房地产发展'},
+                    // {key: '2', label: '基础货币'},
+                    // {key: '3', label: '资本市场'},
+                    // {key: '4', label: '房地产发展'},
                 ],
             },
         ],
